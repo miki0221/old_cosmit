@@ -16,7 +16,7 @@
 | Column          | Type    | Options     |
 | --------------- | ------- | ----------- |
 | title           | string  | null: false |
-| content         | string  | null: false |
+| content         | text    | null: false |
 | category_id     | integer | null: false |
 | start_date      | date    | null: false |
 
