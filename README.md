@@ -18,6 +18,9 @@
 | title           | string  | null: false |
 | content         | text    | null: false |
 | category_id     | integer | null: false |
+| face_id         | integer | null: false |
+| eye_id          | integer | null: false |
+| lip_id          | integer | null: false |
 | start_date      | date    | null: false |
 
 ### Association
