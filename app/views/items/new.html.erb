@@ -3,23 +3,31 @@
     <h2 class="item-title">コスメ内容を入力</h2>
     <%= form_with(model: @item, url:items_path, local: true) do |f| %>
     
-    <%#= render 'shared/error_messages', model: f.object %>
+    <%#= render 'error_messages', model: f.object %>
     <%# コスメ画像%>
     <div class="img-upload">
-      <div class="weight-bold-text">コスメ画像
-        <div class="indispensable">必須</div>
+      <div class="weight-bold-text">
+        コスメ画像
+        <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
         <p>クリックしてファイルをアップロード</p>
-        <%= f.file_field :image, id: "item-image"%>
+        <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
     <%# コスメ詳細%>
-    <div class="items-category">
-      <div class="weight-bold-text">カテゴリー
-        <div class="indispensable">必須</div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-
+    <div class="new-items">
+      <div class="items-category1">
+        <div class="weight-bold-text">
+          カテゴリー 1
+          <span class="indispensable">必須</span>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        </div>
+      </div>
+      <div class="items-category2">
+        <div class="weight-bold-text">
+          カテゴリー 2
+          <span class="indispensable">必須</span>
         <% if :category_id == 2 %>
           <%= f.collection_select(:face_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         <% elsif :category_id == 3 %>
@@ -27,38 +35,43 @@
         <%elseif :category_id == 4 %>
         <%= f.collection_select(:lip_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         <% end %>
+        </div>
       </div>
-      <div class="new-items">
-        <div class="weight-bold-text">コスメ名
-          <div class="indispensable">必須</div>
+      <div class="item-name">
+        <div class="weight-bold-text">
+          コスメ名
+          <span class="indispensable">必須</span>
           <%= f.text_field :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
         </div>
-        <div class="item-content">
-          <div class="weight-bold-text">フリーワード
-            <div class="indispensable">必須</div>
-            <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"フリーワード（特徴・使用感など）", rows: "10"%>
-          </div>
-          <div class="item-start-date">
-            <div class="weight-bold-text">使用開始日
-              <div class="indispensable">必須</div>
-              <%= raw sprintf(
-                    f.date_select(
-                      :birth_id,
-                      class:'select-birth',
-                      id:"birth-date",
-                      use_month_numbers: true,
-                      prompt:'--',
-                      start_year: 1930,
-                      end_year: (Time.now.year - 5),
-                      date_separator: '%s'),
-                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-            </div>
-          </div>
+      </div>
+      <div class="item-content">
+        <div class="weight-bold-text">
+          フリーワード
+          <span class="indispensable">必須</span>
+          <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"フリーワード（特徴・使用感など）", rows: "10"%>
         </div>
       </div>
-      <div class="item-btn">
+      <div class="item-start-date">
+        <div class="weight-bold-text">      
+        使用開始日
+        <span class="indispensable">必須</span>
+        <input type="date" name="today" id="today">
+        <%#= raw sprintf(
+                  f.date_select(
+                    :start_date,
+                    class:'select-date',
+                    id:"item-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                    "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        </div>
+      </div>
+    </div>
+    <div class="item-btn">
     <%= f.submit "SEND" %>
-    </div>
-      <% end %>
-    </div>
+  <% end %>
+  </div>
 </div>
