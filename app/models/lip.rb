@@ -4,10 +4,10 @@ class Lip < ActiveHash::Base
     { id: 2, name: 'リップスティック' },
     { id: 3, name: 'リキッドリップ' },
     { id: 4, name: 'リップグロス' },
-    { id: 5, name: 'リップティント'},
-    { id: 6, name: 'リップペンシル'},
-    { id: 7, name: 'その他'}
+    { id: 5, name: 'リップティント' },
+    { id: 6, name: 'リップペンシル' },
+    { id: 7, name: 'その他' }
   ]
   include ActiveHash::Associations
   has_many :items
-  end
+end
