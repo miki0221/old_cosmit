@@ -1,3 +1,5 @@
 window.addEventListener('load', function(){
-  console.log('発火')
+  
+  category_Option_Id = this.document.getElementById("item-category").onchange = function(){
+  }
 });
