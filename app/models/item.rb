@@ -10,6 +10,6 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :image, blob: { content_type: :image }
     validates :title, :content, :start_date
-    validates :category_id, :face_id, :eye_id, :lip_id, numericality: { other_than: 1, message: "can't be blank" }
+    validates :category_id, :category_option, numericality: { other_than: 1, message: "can't be blank" }
   end
 end

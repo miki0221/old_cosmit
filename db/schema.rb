@@ -37,9 +37,7 @@ ActiveRecord::Schema.define(version: 2022_10_31_144437) do
     t.string "title", null: false
     t.text "content", null: false
     t.integer "category_id", null: false
-    t.integer "face_id", null: false
-    t.integer "eye_id", null: false
-    t.integer "lip_id", null: false
+    t.integer "category_option_id", null: false
     t.date "start_date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
