@@ -3,7 +3,7 @@
     <h2 class="item-title">コスメ内容を入力</h2>
     <%= form_with(model: @item, url:items_path, local: true) do |f| %>
     
-    <%#= render 'error_messages', model: f.object %>
+    <%= render 'error_messages', model: f.object %>
     <%# コスメ画像%>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -28,13 +28,7 @@
         <div class="weight-bold-text">
           カテゴリー 2
           <span class="indispensable">必須</span>
-        <% if :category_id == 2 %>
-          <%= f.collection_select(:face_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <% elsif :category_id == 3 %>
-          <%= f.collection_select(:eye_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <%elseif :category_id == 4 %>
-        <%= f.collection_select(:lip_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <% end %>
+          <%= f.collection_select(:category_option_id, Category_Option.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         </div>
       </div>
       <div class="item-name">
