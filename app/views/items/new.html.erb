@@ -1,0 +1,59 @@
+<div class="item-container">
+  <div class="item-area">
+    <h2 class="item-title">コスメ内容を入力</h2>
+    <%= form_with model: @item, url:items_path, local: true do |f| %>
+
+    <%= render 'error_messages', model: f.object %>
+    <%# コスメ画像%>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+      コスメ画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+        クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /商品画像 %>
+    <%# カテゴリー、コスメ名,フリーワード %>
+    <div class="new-items">
+      <div class="items-category1">
+        <div class="weight-bold-text">カテゴリー1
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      <div class="items-category2">
+        <div class="weight-bold-text">カテゴリー2
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_option_id, CategoryOption.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      <div class="item-name">
+        <div class="weight-bold-text">コスメ名
+        <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    </div>
+    <div class="item-content">
+      <div class="weight-bold-text">フリーワード
+      <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"フリーワード（特徴・使用感など）", rows: "10"%>
+    </div>
+    <div class="item-start-date">
+      <div class="weight-bold-text">使用開始日
+      <span class="indispensable">必須</span>
+      </div>
+      <%= f.date_field :start_date, class: 'item-date' %>
+    </div>
+    <div class="item-btn">
+      <%= f.submit "SEND" , class:"item-color-btn"%>
+    </div>
+
+  </div>
+  <% end %>
+</div>
