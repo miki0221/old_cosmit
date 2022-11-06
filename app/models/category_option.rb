@@ -1,4 +1,4 @@
-class Category_Option < ActiveHash::Base
+class CategoryOption < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'ベース' },
@@ -13,7 +13,7 @@ class Category_Option < ActiveHash::Base
     { id: 10, name: 'アイライナー' },
     { id: 11, name: 'マスカラ' },
     { id: 12, name: 'アイブロウ' },
-    
+
     { id: 13, name: 'リップスティック' },
     { id: 14, name: 'リキッドリップ' },
     { id: 15, name: 'リップグロス' },
