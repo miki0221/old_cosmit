@@ -1,2 +1,44 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<div class="main">
+  <%# TOPイメージ部分 %>
+  <div class="title-content">
+    <h4 class="service-concept">
+      COSME
+      ×
+      MERIT
+      ×
+      LIMIT
+    </h4>
+  </div>
+  <%# /TOPイメージ部分 %>
+
+  <%# コスメ一覧 %>
+  <div class="item-contents">
+    <h4 class="title">Cosmetic list</h4>
+    <div class="category">
+      <ul class="item-lists">
+        <% @items.each do |item| %>
+          <li class='list'>
+            <%#= link_to item_path(item.id) do %>
+              <div class='item-img-content'>
+                <%= image_tag item.image, class: "item-img" if item.image.attached? %>
+              </div>
+              <div class="item-info">
+                <h3 class="item-name">
+                  <%= item.title %>
+                </h3>
+                <div class="item-category">
+                  <%= item.category.name %>
+                </div>
+                <div class="item-limit">
+                  <% if item.category_id == 4 %>
+                  使用期限目安：
+                    <% end %>
+                    </div>
+              </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%# /コスメ一覧 %>
+</div>
