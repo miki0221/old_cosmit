@@ -1,25 +1,44 @@
-# Usersテーブル
+# アプリケーション名
+Cosmit
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
-| birth_id           | date   | null: false               |
+# アプリケーション概要
+所有するコスメの使用開始日を登録し、所有するコスメや使用期限を管理することができる。
 
-### Association
-- has_many :items
+# URL
 
+# 利用方法
+ 1. トップページ（一覧ページ）のヘッダーから登録ボタンを押す
+ 2. コスメ登録ボタンからコスメの内容（画像・タイトル・内容（特徴・使用感など）使用開始日・画面を入力し登録する
 
-# Itemsテーブル
+# アプリケーションを作成した背景
+自分の身の回りの不便だと思うことを振り返ってみた時に、
+所有するコスメが多く何を持っていて、いつ使い始めたのかが把握ができず、気づけば数年経過してしまうことが度々あるため、
+所有するコスメの把握、使用期限を管理するアプリケーションを開発することにした。
 
-| Column             | Type    | Options     |
-| ------------------ | ------- | ----------- |
-| title              | string  | null: false |
-| content            | text    | null: false |
-| category_id        | integer | null: false |
-| category_option_id | integer | null: false |
-| start_date         | date    | null: false |
+# 洗い出した要件
 
-### Association
-- belongs_to :user
+# 実装した機能についての画像やGIFおよびその説明
+## コスメ登録
+準備中
+
+# 実装予定の機能
+現在はコスメ一覧機能を実装中。今後は下記を実装予定。
+- ユーザー管理機能
+- マイページ機能
+- コスメ検索機能
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/dc61db2249d3173070059f4d01ef5a88.png)](https://gyazo.com/dc61db2249d3173070059f4d01ef5a88)
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/89ad903a20561a33e9020e3c4d566856.png)](https://gyazo.com/89ad903a20561a33e9020e3c4d566856)
+
+# 開発環境
+- フロントエンド
+- バックエンド
+- インフラ
+- テキストエディタ
+- タスク管理
+
+# 工夫したポイント
+準備中
