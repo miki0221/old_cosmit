@@ -1,20 +1,15 @@
 <div class="main">
   <%# TOPイメージ部分 %>
   <div class="title-content">
-    <h4 class="service-concept">
-      COSME
-      ×
-      MERIT
-      ×
-      LIMIT
-    </h4>
+    <div class="service-concept">
+    <%= image_tag "cosmit-top.png", class:"top-img" %>
+    </div>
   </div>
   <%# /TOPイメージ部分 %>
 
   <%# コスメ一覧 %>
   <div class="item-contents">
     <h4 class="title">Cosmetic list</h4>
-    <div class="category">
       <ul class="item-lists">
         <% @items.each do |item| %>
           <li class='list'>
@@ -27,18 +22,12 @@
                   <%= item.title %>
                 </h3>
                 <div class="item-category">
-                  <%= item.category.name %>
+                  <%= item.category_option.name %>
                 </div>
-                <div class="item-limit">
-                  <% if item.category_id == 4 %>
-                  使用期限目安：
-                    <% end %>
-                    </div>
               </div>
           </li>
         <% end %>
       </ul>
-    </div>
   </div>
   <%# /コスメ一覧 %>
 </div>

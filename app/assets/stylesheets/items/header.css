@@ -1,6 +1,11 @@
 /********************
 ヘッダー
 ********************/
+
+.header {
+  height: 10vh;
+  width:  100%;
+}
 .header__bar {
   font-family: 'Yuji Boku', serif;
   background-color: black;

@@ -1,0 +1,81 @@
+
+/********************
+TOP画像
+********************/
+.service-concept {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 10vh 15vw;
+  filter:drop-shadow(10px 10px 0 grey);
+}
+
+.top-img {
+  height: 100vh;
+  width: 100%;
+}
+
+/********************
+コスメ一覧
+********************/
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.title {
+  font-size: 4vh;
+  line-height: 1.4;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+  list-style: none;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 2.5vh;
+}
+
+.item-category {
+  font-size: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+/********************
+共通
+********************/
+a {
+  text-decoration: none;
+}
