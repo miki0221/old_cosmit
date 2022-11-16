@@ -23,7 +23,7 @@ https://cosmit.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/591aae85b5c2185d76b80f5286820fc1.gif)](https://gyazo.com/591aae85b5c2185d76b80f5286820fc1)
 
 ## コスメ登録一覧表示
-[![Image from Gyazo](https://i.gyazo.com/dd96cd69dbdcf6044445a8bea7a7b6fd.gif)](https://gyazo.com/dd96cd69dbdcf6044445a8bea7a7b6fd)
+[![Image from Gyazo](https://i.gyazo.com/3dd75103b1b36d500b6f15551971de24.gif)](https://gyazo.com/3dd75103b1b36d500b6f15551971de24)
 
 # 実装予定の機能
 現在はコスメ詳細機能を実装中。今後は下記を実装予定。
