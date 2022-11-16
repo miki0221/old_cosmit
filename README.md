@@ -20,9 +20,10 @@ https://cosmit.onrender.com
 
 # 実装した機能についての画像やGIFおよびその説明
 ## コスメ登録
-準備中
+[![Image from Gyazo](https://i.gyazo.com/591aae85b5c2185d76b80f5286820fc1.gif)](https://gyazo.com/591aae85b5c2185d76b80f5286820fc1)
+
 ## コスメ登録一覧表示
-準備中
+[![Image from Gyazo](https://i.gyazo.com/dd96cd69dbdcf6044445a8bea7a7b6fd.gif)](https://gyazo.com/dd96cd69dbdcf6044445a8bea7a7b6fd)
 
 # 実装予定の機能
 現在はコスメ詳細機能を実装中。今後は下記を実装予定。
